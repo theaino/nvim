@@ -98,23 +98,22 @@ return {
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope-ui-select.nvim"
+			"nvim-telescope/telescope-ui-select.nvim",
+			"fannheyward/telescope-coc.nvim"
 		},
 		config = function ()
-			require("telescope").load_extension("ui-select")
+			require("telescope").load_extension("coc")
 		end,
 		opts = {
-			extensions = {
-				["ui-select"] = {
-					require("telescope.themes").get_dropdown {
-					}
-				}
-			},
 			pickers = {
 				colorscheme = {
 					enable_preview = true
 				}
 			}
+		},
+		keys = {
+			{ "<leader>ca", "<cmd>Telescope coc file_code_actions<cr>", desc = "File code actions" },
+			{ "<leader>cl", "<cmd>Telescope coc line_code_actions<cr>", desc = "Line code actions" },
 		}
 	},
 	{
