@@ -1,4 +1,4 @@
-local configs = require("lspconfig.configs")
+--[[local configs = require("lspconfig.configs")
 --[[ configs.rubymine_lsp = {
 	default_config = {
 		name = "rubymine_lsp",
