@@ -4,10 +4,16 @@ return {
 		branch = "release",
 		lazy = false,
 		keys = {
-			{ "<C-i>",
-			"coc#pum#visible() ? coc#pum#confirm() : {}",
-			expr = true, silent = true, mode = "i" },
-		}
+			--[[{
+				"<C-y>",
+				function()
+					if vim.fn.pumvisible() == 1 then
+						return vim.cmd("coc#pum#confirm()")
+					end
+				end,
+				mode = "i"
+			},]]--
+		},
 	},
 	{ "L3MON4D3/LuaSnip" },
 	{
@@ -22,6 +28,7 @@ return {
 				highlight = { enable = true },
 				indent = {
 					enable = false,
+					disable = { "go" }
 				},
 			})
 		end

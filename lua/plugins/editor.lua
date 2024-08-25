@@ -94,7 +94,10 @@ return {
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
 			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find help tags" },
-			{ "<leader>ft",  "<cmd>Telescope colorscheme<cr>", desc = "Find theme" }
+			{ "<leader>ft",  "<cmd>Telescope colorscheme<cr>", desc = "Find theme" },
+
+			{ "<leader>ca", "<cmd>Telescope coc file_code_actions<cr>", desc = "File code actions" },
+			{ "<leader>cl", "<cmd>Telescope coc line_code_actions<cr>", desc = "Line code actions" },
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -111,10 +114,6 @@ return {
 				}
 			}
 		},
-		keys = {
-			{ "<leader>ca", "<cmd>Telescope coc file_code_actions<cr>", desc = "File code actions" },
-			{ "<leader>cl", "<cmd>Telescope coc line_code_actions<cr>", desc = "Line code actions" },
-		}
 	},
 	{
 		"akinsho/toggleterm.nvim", version = "*",
