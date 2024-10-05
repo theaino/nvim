@@ -63,7 +63,7 @@ return {
 			{ "<A-k>", "<C-\\><C-N>:MoveLine(-1)<CR>i", mode = { "i" } },
 		}
 	},
-	{
+	--[[{
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		opts = {
@@ -86,7 +86,7 @@ return {
 			"MunifTanjim/nui.nvim",
 			"rcarriga/nvim-notify",
 		}
-	},
+	},]]--
 	{
 		"nvim-telescope/telescope.nvim", tag = "0.1.8",
 		keys = {
@@ -98,6 +98,9 @@ return {
 
 			{ "<leader>ca", "<cmd>Telescope coc file_code_actions<cr>", desc = "File code actions" },
 			{ "<leader>cl", "<cmd>Telescope coc line_code_actions<cr>", desc = "Line code actions" },
+			
+			{ "gd", "<cmd>Telescope coc definitions<cr>", desc = "Goto definition" },
+			{ "gr", "<cmd>Telescope coc references<cr>", desc = "Goto references" },
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -147,5 +150,11 @@ return {
 			{ "<A-d>", function() require("harpoon"):list():select(3) end },
 			{ "<A-f>", function() require("harpoon"):list():select(4) end },
 		}
+	},
+	{
+		"MunifTanjim/nui.nvim"
+	},
+	{
+		"lommix/godot.nvim"
 	}
 }

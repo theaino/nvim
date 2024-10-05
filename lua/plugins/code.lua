@@ -13,6 +13,7 @@ return {
 				end,
 				mode = "i"
 			},]]--
+			{ "<leader>cc", "<cmd>CocCommand<cr>", desc = "Code command" }
 		},
 	},
 	{ "L3MON4D3/LuaSnip" },
@@ -27,7 +28,7 @@ return {
 				sync_install = false,
 				highlight = { enable = true },
 				indent = {
-					enable = false,
+					enable = true,
 					disable = { "go" }
 				},
 			})
